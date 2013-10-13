@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>One Picture -- 每一副图片都是一面镜子，每个人从图片中看到的是不一样的世界</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+		</head>
+		<style>
+			/*init*/
+			body,tr,td,dl,dd,ul,li,div,img{margin:0px; padding:0px;}
+			
+			/*top*/
+			#top{width；100%;height:50px;background:#1C1C1C;color:white}
+			#top h2{margin:10px;}
+			
+			/*图片区*/
+			#core_img_wrapper{ width:100%; height:300px; border:1px red solid;text-align:center;}
+			#core_img_con{ width:300px; height:300px; border:1px green solid;}
+			#core_img_t{width:300px; height:50px; border:1px green solid;}
+			#core_img_b{width:300px; height:30px; border:1px green solid;}
+			
+			/*编辑区*/
+			#content_wrapper{ width:960px; margin:0 auto; border:1px blue solid; height:200px;}
+			#content_edit{}
+			#content_list{}
+			
+			/*footer*/
+			#footer{width:100%; height:50px; border:1px red solid;}
+			</style>
+		<body>
+			
+			<!-- top start-->
+			<div id="top">
+				<h2>One Picture</h2>
+				</div>
+			<!-- top end-->
+			
+			<!-- core_img_wrapper start-->
+			<div id="core_img_wrapper">
+					<div id="core_img_t"></div>
+					<div id="core_img_con"></div>
+					<div id="core_img_b"></div>
+			</div>
+			<!-- core_img_wrapper end-->
+			
+			<div id="content_wrapper">
+				<div id="content_edit"></div>
+				<div id="content_list"></div>
+			</div>
+			
+			<div id="footer">
+			</div>	
+			</body>
+	</html>
