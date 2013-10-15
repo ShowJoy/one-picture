@@ -7,21 +7,29 @@
 		<style>
 			/*init*/
 			body,tr,td,dl,dd,ul,li,div,img{margin:0px; padding:0px;}
+			body{font-family:'微软雅黑'}
 			
 			/*top*/
 			#top{width；100%;height:50px;background:#1C1C1C;color:white}
 			#top h2{margin:10px;}
 			
 			/*图片区*/
-			#core_img_wrapper{ width:100%; height:300px; border:1px red solid;text-align:center;}
-			#core_img_con{ width:300px; height:300px; border:1px green solid;}
-			#core_img_t{width:300px; height:50px; border:1px green solid;}
-			#core_img_b{width:300px; height:30px; border:1px green solid;}
+			#core_img_wrapper{ background:url('images/bg_core_pic.png');width:100%; height:300px; border:1px red solid;text-align:center;}
+			#core_img_con{ width:300px; height:300px;}
+			#core_img_con img{width:300px; height:300px;cursor:pointer}
+			#core_img_com{width:960px; }
+			#core_img_t{width:300px; height:50px; text-align:left;line-height:50px;}
+			#core_img_t h3{color:red;display:inline;margin-right:20px;}
+			#core_img_b{width:300px; height:30px;}
+			#core_img_b input{display:inline;width:30px; margin:10px 10px 10px 0px;}
 			
 			/*编辑区*/
-			#content_wrapper{ width:960px; margin:0 auto; border:1px blue solid; height:200px;}
-			#content_edit{}
-			#content_list{}
+			#content_wrapper{text-align:center; width:100%; margin:0 auto; border:1px blue solid; height:200px;}
+			#content_c{ width:960px; height:300px; text-align:left;}
+			#content_edit{float:left;width:70%; height:300px; border:1px gray solid;}
+			#content_edit h4{ border:1px red solid;margin:0px; text-align:left}
+			#content_edit textarea{width:100%;height:270px;}
+			#content_list{float:right;width:25%; height:300px; border:1px green solid;}
 			
 			/*footer*/
 			#footer{width:100%; height:50px; border:1px red solid;}
@@ -36,15 +44,37 @@
 			
 			<!-- core_img_wrapper start-->
 			<div id="core_img_wrapper">
-					<div id="core_img_t"></div>
-					<div id="core_img_con"></div>
-					<div id="core_img_b"></div>
+				<div id="core_img_com">
+					<div id="core_img_t">
+						<h3>第325期</h3><small>2013.03.02&nbsp;&nbsp;选图人：小泽</small>
+						</div>
+					<div id="core_img_con"><img src="images/core.jpg" class="img-rounded"/></div>
+					<div id="core_img_b">
+						<input type="button" class="btn" value="喜欢(25655)"/>
+						<input type="button" class="btn" value="不好(5222)"/>
+					</div>
+				</div>
 			</div>
 			<!-- core_img_wrapper end-->
 			
 			<div id="content_wrapper">
-				<div id="content_edit"></div>
+				<div id="content_c">
+				<div id="content_edit">
+					
+					<ul class="nav nav-tabs">
+						<li class="active">
+							<a href="#">首页</a>
+							</li>
+							<li><a href="#">...</a></li>
+							<li><a href="#">...</a></li>
+					</ul>
+					
+					<textarea rows="3" cols="20">
+					在w3school，你可以找到你所需要的所有的网站建设教程。
+					</textarea>
+					</div>
 				<div id="content_list"></div>
+				</div>
 			</div>
 			
 			<div id="footer">
