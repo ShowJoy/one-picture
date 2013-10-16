@@ -1,50 +1,73 @@
 <html>
 	<head>
 		<title>One Picture -- 每一副图片都是一面镜子，每个人从图片中看到的是不一样的世界</title>
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="css/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <script src="js/jquery.js"></script>
+    <script src="css/bootstrap/js/bootstrap.min.js"></script>
 		</head>
-		<style>
+		<style><!--
 			/*init*/
 			body,tr,td,dl,dd,ul,li,div,img{margin:0px; padding:0px;}
 			body{font-family:'微软雅黑'}
 			
 			/*top*/
-			#top{width；100%;height:50px;background:#1C1C1C;color:white}
-			#top h2{margin:10px;}
+			#top{width:100%;height:50px;background:#000033;color:white;line-height:50px; position:relative; padding-top:5px;}
+			#top h2{margin:0px 0px 0px 10px;}
+			#top #top_bar{position:absolute;right:30px; top:5px;}
+			#top_bar input{width:120px;}
 			
 			/*图片区*/
-			#core_img_wrapper{ background:url('images/bg_core_pic.png');width:100%; height:300px; border:1px red solid;text-align:center;}
-			#core_img_con{ width:300px; height:300px;}
+			#core_img_wrapper{ background:url('images/bg_core_pic.png');width:100%;text-align:center;}
+			#core_img_con{ width:300px; height:300px;margin:0px auto;}
 			#core_img_con img{width:300px; height:300px;cursor:pointer}
-			#core_img_com{width:960px; }
-			#core_img_t{width:300px; height:50px; text-align:left;line-height:50px;}
+			#core_img_com{width:960px; margin:0px auto;background:url('images/bg_core_pic.png'); position:relative;}
+			#core_img_t{width:300px; height:50px; text-align:left;line-height:50px;margin:0px auto;}
 			#core_img_t h3{color:red;display:inline;margin-right:20px;}
-			#core_img_b{width:300px; height:30px;}
-			#core_img_b input{display:inline;width:30px; margin:10px 10px 10px 0px;}
+			#core_img_b{width:300px; height:30px;margin:0px auto;padding:10px 10px 10px 10px;}
+			#core_img_b input{display:inline; }
+
+			
+			#core_img_text{position:absolute; left:0px; top:130px; width:280px; text-align:left;}
 			
 			/*编辑区*/
-			#content_wrapper{text-align:center; width:100%; margin:0 auto; border:1px blue solid; height:200px;}
-			#content_c{ width:960px; height:300px; text-align:left;}
-			#content_edit{float:left;width:70%; height:300px; border:1px gray solid;}
+			#content_wrapper{text-align:center; width:100%; margin:0 auto;}
+			#content_c{ width:960px; height:330px; text-align:left;margin:5px auto;}
+			#content_edit{float:left;width:70%; height:350px;}
 			#content_edit h4{ border:1px red solid;margin:0px; text-align:left}
-			#content_edit textarea{width:100%;height:270px;}
-			#content_list{float:right;width:25%; height:300px; border:1px green solid;}
+			#content_edit textarea{width:100%;height:200px;}
+			#content_edit input{ margin-bottom:10px; width:200px;}
+			#content_list{float:right;width:25%; height:300px;}
+			#content_list td{padding:5px;padding-top:0px; border-bottom:1px #F7F7F7 solid; height:80px;}
+			#content_list .sh_list_t{font-size:12px;}
 			
 			/*footer*/
-			#footer{width:100%; height:50px; border:1px red solid;}
+			#footer{width:100%; height:50px; border-top:1px #E5E5E5 solid;clear:both; text-align:center;line-height:50px; }
+			#footer dd{margin:10px; display:inline;}
+			-->
 			</style>
-		<body>
 			
+			<script>
+				<!--
+					
+				-->
+				</script>
+		<body>
 			<!-- top start-->
 			<div id="top">
 				<h2>One Picture</h2>
+				<div id="top_bar">
+					帐号：<input type="text" />&nbsp;密码：<input type="password"/> <button type="submit" class="btn btn-default">登录</button> <small>新用户注册</small>
+					</div>
 				</div>
 			<!-- top end-->
 			
 			<!-- core_img_wrapper start-->
 			<div id="core_img_wrapper">
 				<div id="core_img_com">
+					<div id="core_img_text">
+					<h4>有一天回首发现，你就还在那里，但身边少了许多人！</h4>
+					</div>
 					<div id="core_img_t">
 						<h3>第325期</h3><small>2013.03.02&nbsp;&nbsp;选图人：小泽</small>
 						</div>
@@ -57,27 +80,113 @@
 			</div>
 			<!-- core_img_wrapper end-->
 			
+			<!-- content_wrapper start-->
 			<div id="content_wrapper">
 				<div id="content_c">
-				<div id="content_edit">
-					
-					<ul class="nav nav-tabs">
-						<li class="active">
-							<a href="#">首页</a>
-							</li>
-							<li><a href="#">...</a></li>
-							<li><a href="#">...</a></li>
-					</ul>
-					
-					<textarea rows="3" cols="20">
-					在w3school，你可以找到你所需要的所有的网站建设教程。
-					</textarea>
+					<div id="content_edit">
+						
+						<ul class="nav nav-tabs">
+						  <li  class="active"><a href="#short" data-toggle="tab" title="300字以内">短评</a></li>
+						  <li><a href="#long" data-toggle="tab">长篇</a></li>
+						</ul>
+						
+						<div class="tab-content">
+							
+						  <div class="tab-pane active" id="short">
+						    正文：</br>
+						  	<textarea rows="3" cols="20">
+									1
+								</textarea>
+								<input type="button" class="btn btn-default" style="width:60px;" value="走起"/>
+						</div>
+						  <div class="tab-pane" id="long">
+							  标题：<input type="label"/></br>
+							  正文：<textarea rows="3" cols="20">
+										2
+									</textarea>
+							 <input type="button" class="btn btn-default" style="width:60px;" value="走起"/>
+							</div>
+						</div>
+						
 					</div>
-				<div id="content_list"></div>
-				</div>
+					
+					<div id="content_list">
+						
+						<ul class="nav nav-tabs" id="com_list_tab">
+						  <li  class="active"><a href="#short_l" data-toggle="tab">短评</a></li>
+						  <li><a href="#long_l" data-toggle="tab">长篇</a></li>
+						  <li><a href="#score_l" data-toggle="tab">积分排行</a></li>
+						</ul>
+						
+						<div class="tab-content">
+						  <div class="tab-pane active" id="short_l">
+						  	 <table>
+						  	 	<tr>
+						  	 		<td style="width:50px;"><img src='images/core.jpg' style="width:50px; height:50px;"/></td>
+						  	 		<td class="sh_list_t">我不是疯子：从这副图片中，我能感受到一种爱，一种执着，一种无私。</td>
+						  	 		</tr>
+						  	 <tr>
+						  	 		<td><img src='images/core.jpg' style="width:50px; height:50px;"/></td>
+						  	 		<td class="sh_list_t">我不是疯子：从这副图片中，我能感受到一种爱，一种执着，一种无私。</td>
+						  	 		</tr>
+						  	 <tr>
+						  	 		<td><img src='images/core.jpg' style="width:50px; height:50px;"/></td>
+						  	 		<td class="sh_list_t">我不是疯子：从这副图片中，我能感受到一种爱，一种执着，一种无私。</td>
+						  	 		</tr>
+						  	 	</table>
+						  </div>
+						  <div class="tab-pane" id="long_l">
+						  	 <table>
+						  	 	<tr>
+						  	 		<td style="width:50px;"><img src='images/core.jpg' style="width:50px; height:50px;"/></td>
+						  	 		<td class="sh_list_t">我不是疯子：从这副图片中，我能感受到一种爱，一种执着，一种无私。</td>
+						  	 		</tr>
+						  	 <tr>
+						  	 		<td><img src='images/core.jpg' style="width:50px; height:50px;"/></td>
+						  	 		<td class="sh_list_t">我不是疯子：从这副图片中，我能感受到一种爱，一种执着，一种无私。</td>
+						  	 		</tr>
+						  	 <tr>
+						  	 		<td><img src='images/core.jpg' style="width:50px; height:50px;"/></td>
+						  	 		<td class="sh_list_t">我不是疯子：从这副图片中，我能感受到一种爱，一种执着，一种无私。</td>
+						  	 		</tr>
+						  	 	</table>
+							</div>
+							<div class="tab-pane" id="score_l">
+						  	  <table>
+						  	 	<tr>
+						  	 		<td style="width:50px;"><img src='images/core.jpg' style="width:50px; height:50px;"/></td>
+						  	 		<td class="sh_list_t">我不是疯子：从这副图片中，我能感受到一种爱，一种执着，一种无私。</td>
+						  	 		</tr>
+						  	 <tr>
+						  	 		<td><img src='images/core.jpg' style="width:50px; height:50px;"/></td>
+						  	 		<td class="sh_list_t">我不是疯子：从这副图片中，我能感受到一种爱，一种执着，一种无私。</td>
+						  	 		</tr>
+						  	 <tr>
+						  	 		<td><img src='images/core.jpg' style="width:50px; height:50px;"/></td>
+						  	 		<td class="sh_list_t">我不是疯子：从这副图片中，我能感受到一种爱，一种执着，一种无私。</td>
+						  	 		</tr>
+						  	 	</table>
+							</div>
+						</div>
+						
+						
+						
+						</div>
+					</div>
 			</div>
+			<!-- content_wrapper end-->
 			
+			<!-- footer start-->
 			<div id="footer">
+				<div  id="fo_text">
+					<dl>
+						<dd>关于网站</dd>
+						<dd>帮助</dd>
+						<dd>联系我们</dd>
+						<dd><small>keep it simple , stupid</small></dd>
+						</dl>
+					</div>
 			</div>	
+			<!-- footer end-->
 			</body>
 	</html>
